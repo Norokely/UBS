@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!--adapter la page aux écrans de différentes tailles-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Acceuil</title>
+        <!--insérer le favion-->
+        <link rel="shortcut ion" href="icone ensibs.jpg.png" type="image:x-icon">
+        <link rel="stylesheet" href="">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0; /*supprimer les marges*/
+                padding: 0; /*supprimer les espacement*/
+            }
+            body{ 
+                font-family: AriaL;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+            }
+            header, footer {
+                background-color: #004d00;
+                color :white;
+                text-align: center;
+                padding: 20px;
+            }
+            header {
+                font-size: 32px;
+            }
+            footer{ 
+                font-size: 16px;
+            }
+            .container {
+                flex: 1;
+                display: grid; /*concevoir une page avec des lignes et colonnes*/
+                width: 100%;
+                margin: 0;
+            }
+            nav, article{
+                padding: 20px;
+            }
+            nav {
+                background: whitesmoke;
+                flex: 1;
+                font-size: 15px;
+            }
+            article{
+                background-color: white;
+                font-size: 18px;
+            }
+            nav ul{
+                list-style-type: none ; /* supprimer les puces ou numéros par défaut (ordonnée ou non)*/
+                padding: 0;
+            }
+            nav ul li {
+                flex: 1;
+            }
+            nav ul li a {
+                color: black;
+                font-size: 18px;
+                padding: 15px;
+                border: 1px solid whitesmoke;
+                border-radius: 5px;
+                text-align: center;
+                width: 100%;
+                box-sizing: border-box;/*la largeur et la hauteur incluent les bordures et les espacements internes*/
+        
+            }
+            nav ul li a:hover {
+                background-color: #004d00;
+                color: white;
+            }
+            .btn {
+                display : inline-block;/*élements en ligne*/
+                padding : 15px 25px;
+                margin: 5px 0;
+                font-size: 18px;
+                text-align: center;
+                color: white;
+                background-color: #004d00;
+                border-radius: 5px; /*coins arrondis*/
+                text-decoration: none;/*enlever le soulignement du texte*/
+            }
+            .btn:hover{
+                background-color: #004d00;
+            }
+
+            @media (min-width: 600px) { /* règle de media appliquée lorsque la largeur de l'écran est d'au moins 600 pixels*/
+                .container {
+                    grid-template-columns: 20% 80%; /*deux colonnes*/
+                    grid-template-rows: none; /*aucune ligne*/
+                }
+                nav {
+                    order: 1; /* placé dans l'ordre de la grille*/
+                }
+                article {
+                    order: 2;
+                }
+            }
+        </style>
+
+        
+    </head>
+    <body>
+        <a href="index.html"><img src="ubs.png" width=250px height= 180px alt= ""></a>
+        <header>
+            <h2>ENSIBS</h2>
+        </header>
+        <div class="container">
+            <nav><!--définit un ensemble de liens de naviguation-->
+                <ul>
+                    <li><a href="Apprentissage.html"
+                    class ="btn">Parcours Alternance</a></li>
+                    <li><a href="https://www-ensibs.univ-ubs.fr/fr/formations/formations/diplome-d-ingenieur-DI/sciences-technologies-sante-STS/diplome-d-ingenieur-genie-industriel-4-0-IGEI00_207.html"
+                        class ="btn">Parcours Classique</a></li>
+                        
+                </ul>
+
+            </nav>
+            <article><!--définit un contenu indépendant-->
+<h1>Découvrez l'école</h1>
+<p>Implantée au sein de l'Université de Bretagne-Sud, l’École Nationale Supérieure d’Ingénieurs de Bretagne-Sud (ENSIBS) propose six spécialités sur Lorient et Vannes</p>
+<p>L'ENSIBS forme des ingénieurs aptes à innover et entreprendre. Membre de la Conférence des Directeurs des Grandes Écoles de Bretagne (CDGEB ), elle participe au développement de la formation et bénéficie de la synergie avec les Grandes Écoles de la région.</p>
+   <p> Les élèves suivent une formation équilibrée entre cours, travaux dirigés et pratiques qui mêlent enseignements scientifiques, technologiques et en sciences humaines et sociales. L'enseignement met l'accent sur la polyvalence et la pluridisciplinarité. L'ingénieur est formé(e) à la conduite de projet, au management, au travail en réseau.</p>
+            </article>
+        </div>
+        <footer>
+            <p>Contactez-nous : contact@ensibs.fr / Suivez-nous:
+                <a href="https://www.facebook.com/ENSIBS.Lorient.Vannes/" class="btn">Facebook</a>
+                <a href="https://x.com/ENSIBS" class="btn">Twitter</a>
+            </p>
+        </footer>
+ 
+      
+    </body>
+</html>

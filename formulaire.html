@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <title>Formulaire Complet</title>
+            <script src="formulaire.js" defer></script>
+        <style>
+            body {
+                font-family: Arial;
+                background-color: whitesmoke;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            /*style pour le formulaire*/
+            form {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            /*style pour les labels*/
+                label {
+                    display: block; /*définir l'élémment comme un block, prenant toute la largeur disponible*/
+                    margin-bottom: 8px; /*ajouter un espace de 8px en bas de l'élément*/
+                    font-weight: bold; /*texte en gras*/
+                    color: #555;
+                }
+                /*styles pour les champs de texte et autres éléments de formulaires*/
+                /*appliquer les styles aux champs de texte, email, date, select et textarea*/
+                input[type="text"],
+                input[type="email"],
+                input[type="date"],
+                select,
+                textarea {
+                    width: calc(100% - 20px); /*la largeur: 100% du conteneur parent moins 20 px*/
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    font-size: 16px;
+                }
+
+                /* styles pour les boutons radio et les cases à cocher*/
+                input[type="radio"] 
+                input[type="checkbox"]{
+                        margin-right: 10px;/*marge à droite des boutons radio et des cases à cocher*/
+                }
+
+                /*styles aux étiquettes après les boutons radio et les cases à cocher*/
+
+                input[type="radio"] + label,
+                input[type="checkbox"] + label {
+                    display: inline-block; /*texte aligné avec le bouton*/
+                    margin-right: 20px;
+                    font-weight: normal;
+                }
+
+                /*styles pour le bouton de soumission*/
+                input[type="submit"] {
+                    background-color: green;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: #084d08;
+                }
+        </style>
+</head>
+<body>
+    <a href="index.html"><img src="ubs.png" width=250px height= 180px alt= ""></a>
+<h1>Formulaire prise de contact</h1>
+<form id="contact-form" onsubmit="handleSubmit(event)">
+    <!--champ de texte-->
+     <label for="nom">Nom :</label>
+     <input type="text" id="nom" name="nom" required><br><br>
+     <label type="Prénom">Prénom :</label>
+     <input type="text" id="Prénom" name="Prénom" required><br><br>
+
+     <!--champ d'email-->
+     <label for="email">Email :</label>
+     <input type="email" id="email" name="email" required><br><br>
+
+        <!--champ de date-->
+        <label for="date">Date de naissance:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+     <!--Liste déroulante-->
+     <label for="Formations">Formations souhaitées à l'ENSIBS :</label>
+     <select id="Formations" name="Formations">
+            <option value="Cyberdéfense">Cyberdéfense</option>
+            <option value="Energies, Hydrogène">Energies, Hydrogène</option>
+            <option value="Génie civil 4.0">Génie civil 4.0</option>
+            <option value="Génie Industriel 4.0">Génie Industriel 4.0</option>
+            <option value="Informatique et Cybersécurité">Informatique et Cybersécurité</option>
+            <option value="Mécatronique">Mécatronique/option>
+     </select><br><br>
+
+
+     <!--boutons radio-->
+<p>Actuellement, vous êtes :</p>
+<input type="radio" id="1ère" name="année" value="1ère">
+<label for="1ère">en 1ère</label><br><br>
+<input type="radio" id="terminale" name="année" value="terminale">
+<label for="terminale">en terminale</label><br><br>
+<input type="radio" id="IUT" name="année" value="IUT">
+<label for="IUT">en IUT</label><br><br>
+<input type="radio" id="licence" name="année" value="licence">
+<label for="licence">en licence</label><br><br>
+<input type="radio" id="master" name="année" value="master">
+<label for="master">en master</label><br><br>
+<input type="radio" id="reprise" name="année" value="reprise">
+<label for="reprise">en reprise</label><br><br>
+<input type="radio" id="autre" name="année" value="autre">
+<label for="1ère">autre</label><br><br>
+
+<!--case à cocher-->
+<p>Langues parlées</p>
+<input type="checkbox" id="français" name="langues" value="français">
+<label for="français">Français</label><br><br>
+<input type="checkbox" id="anglais" name="langues" value="anglais">
+<label for="anglais">Anglais</label><br><br>
+<input type="checkbox" id="espagnol" name="langues" value="espagnol">
+<label for="espagnol">Espagnol</label><br><br>
+
+<!--zone de texte-->
+<label for="demande">Vous avez une demande spécifique à formuler</label><br>
+<textarea id="demande" name="demande" rows="4" cols="50"></textarea><br><br>
+
+<!--bouton de soumission-->
+<input type="submit" value="Envoyer">
+
+
+</form>
+</body>
+</html>
