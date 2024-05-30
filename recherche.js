@@ -7,7 +7,7 @@ document.getElementById('formulairerechercheJS').addEventListener('submit', func
     résultats.innerHTML = ''; // Réinitialiser le contenu des résultats
 
     // Liste des pages à rechercher
-    const pages = ['Apprentissage.html', 'Media.html', 'pagejavascript.html'];
+    const pages = ['page1.html', 'Media.html', 'pagejavascript.html'];
 
     // Parcourir chaque page pour effectuer la recherche
     pages.forEach(page => {
